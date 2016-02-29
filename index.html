@@ -35,12 +35,12 @@
 <p> This is a guide to restaurants, shops, and services along Westchester Avenue in the northeastern Bronx neighborhood of Pelham Bay.
 </p>
 
-  <div id="myMap"></div>
-  
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script type="text/javascript">
 
+  <div id="myMap"></div>
+  
   //CartoDB Basemap
  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
@@ -80,7 +80,7 @@ map.addLayer(layer);
   myMapData.forEach(function(element) {
     var marker = L.marker(element.coord).addTo(map);
     marker.bindPopup(element.Name) -->
-  });
+ <!-- }); -->
 
 <!-- (function () {
 
@@ -103,10 +103,10 @@ map.addLayer(layer);
 
 // }); -->
 
-  // var panOptions = {
-  //   animate: true,
-  //   duration: 2
-  // }
+   var panOptions = {
+     animate: true,
+     duration: 2
+   }
 
   </script>
 </body>
