@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
    <style type="text/css">
 
-
     body, html {
       font-family: sans-serif;
     }
@@ -41,7 +40,6 @@
 
   <div id="myMap"></div>
   
-  //CartoDB Basemap
  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
@@ -55,11 +53,11 @@ var map = L.map('myMap', {
 map.addLayer(layer);
 
 
-// <div id="pointdata"></div>
-   <link rel ="pointdata" script type="text/javascript" src="Businessesformatted.js"></script>
+ <div id="pointdata"></div>
+   // <link rel ="pointdata" script type="text/javascript" src="Businessesformatted.js"></script>/
    <!-- <script type="text/javascript" src="AmendolaBusinesses.js"></script> -->
 
-  L.geoJson('pointdata').addTo(map);
+  <!-- L.geoJson('pointdata').addTo(map); -->
 
 <!-- // var pointdata =
 //  '{"Name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
@@ -103,11 +101,11 @@ map.addLayer(layer);
 
 // }); -->
 
-   var panOptions = {
+ <!--   var panOptions = {
      animate: true,
      duration: 2
    }
-
+ -->
   </script>
 </body>
 </html>
