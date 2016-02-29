@@ -14,7 +14,7 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-  <script type="text/javascript" src="AmendolaBusinesses.js"></script>
+  <script type="text/javascript" src="Businessesformatted.js"></script>
   <style type="text/css">
     body, html {
       font-family: sans-serif;
@@ -31,7 +31,8 @@
 
 <body>
 
-
+<p> This is a guide to restaurants, shops, and services along Westchester Avenue in the Northeaster Bronx neighborhood of Pelham Bay.
+</p>
 
   <!-- <button id="one" class="myButton">One!</button> -->
   <!-- <button id="two" class="myButton">Two!</button> -->
@@ -57,7 +58,7 @@ var map = L.map('myMap', {
 
 map.addLayer(layer);
 
-  L.geoJson(AmendolaBusinesses.js).addTo(map);
+  L.geoJson(Businessesformatted.js).addTo(map);
 
 
   // var Amendola Plaza = [40.706913,-73.987513];
