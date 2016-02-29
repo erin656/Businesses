@@ -25,14 +25,6 @@
       background-color: gray;
     }
 
-     /*button {
-      width: 200px;
-      height: 73px;
-      margin-bottom: 50px;
-      font-size: 24px;
-      border-radius: 10px;
-      margin-right: 10px;
-    }*/
   </style>
 </head>
 
@@ -54,51 +46,34 @@
  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
-
-
+ 
 var map = L.map('myMap', {
   scrollWheelZoom: false,
   center: [40.852080,-73.827830],
   zoom: 13
 });
-=======
 
-var map = L.map('map', {
-  scrollWheelZoom: false,
-  center: [40.852080,-73.827830],
-  zoom: 6
-});
 
 map.addLayer(layer);
 
   L.geoJson(AmendolaBusinesses.geojson).addTo(map);
 
 
-map.addLayer(layer);
-
-
-  L.geoJson(Businessesformatted.json).addTo(map);
-
   // var Amendola Plaza = [40.706913,-73.987513];
   // var Wilkinson Plaza = [40.788129,-73.974509];
   // var Area = [40.852080,-73.827830];
   // var myZoom = 17;
-
-  var Amendola Plaza = [40.706913,-73.987513];
-  var Wilkinson Plaza = [40.788129,-73.974509];
-  var Area = [40.852080,-73.827830];
-  var myZoom = 17;
 
   //now the fun stuff:  leaflet!
   // var map = L.map('myMap').setView(Area, myZoom);
   // map.addLayer(layer)
   // //Let's add a marker
   // var marker = L.marker([40.768058,-73.981891]).addTo(map);
-  // marker.bindPopup("<b>Hello world!</b><br>I am a popup.")
+
   //Now let's use our custom-made array to make many markers
   myMapData.forEach(function(element) {
     var marker = L.marker(element.coord).addTo(map);
-    marker.bindPopup("<b>Hello world!</b><br>I am " + element.Name)
+    marker.bindPopup(element.Name)
   });
 
 
@@ -107,20 +82,6 @@ map.addLayer(layer);
   //   duration: 2
   // }
 
-  var panOptions = {
-    animate: true,
-    duration: 2
-  };
-
-    // $(".myButton").click(function() {
-    //   if($(this).attr('id') == 'one' ) {
-    //     $(this).css('background-color','green');
-    //     map.panTo(eastRiver, panOptions);
-    //   } else {
-    //     $(this).css('background-color','red');
-    //     map.panTo(upperWestSide, panOptions);
-    //   }
-    // });
   </script>
 </body>
 </html>
