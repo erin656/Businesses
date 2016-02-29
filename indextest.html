@@ -24,14 +24,14 @@
       height: 500px;
       background-color: gray;
     }
-    /*button {
+    button {
       width: 200px;
       height: 73px;
       margin-bottom: 50px;
       font-size: 24px;
       border-radius: 10px;
       margin-right: 10px;
-    }*/
+    }
   </style>
 </head>
 
@@ -62,7 +62,7 @@ var map = L.map('map', {
 
 map.addLayer(layer);
 
-  L.geoJson(AmendolaBusinesses.geojson).addTo(map);
+  L.geoJson(Businessesformatted.json).addTo(map);
 
 
   var Amendola Plaza = [40.706913,-73.987513];
