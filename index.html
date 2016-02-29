@@ -36,10 +36,11 @@
 
   <!-- <button id="one" class="myButton">One!</button> -->
   <!-- <button id="two" class="myButton">Two!</button> -->
-
-
+<div id="pointdata"></div>
+  <script type="text/javascript" src="Businessesformatted.js"></script>
+  
   <div id="myMap"></div>
-
+  
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script type="text/javascript">
@@ -58,7 +59,7 @@ var map = L.map('myMap', {
 
 map.addLayer(layer);
 
-  L.geoJson(Businessesformatted.js).addTo(map);
+  L.geoJson('pointdata').addTo(map);
 
 
   // var Amendola Plaza = [40.706913,-73.987513];
