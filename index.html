@@ -52,11 +52,12 @@ var map = L.map('myMap', {
   zoom: 13
 });
 
-<div id="pointdata"></div>
-  <script type="text/javascript" src="Businessesformatted.js"></script>
-   <script type="text/javascript" src="AmendolaBusinesses.js"></script>
-
 map.addLayer(layer);
+
+
+// <div id="pointdata"></div>
+   <link rel ="pointdata" script type="text/javascript" src="Businessesformatted.js"></script>
+   <!-- <script type="text/javascript" src="AmendolaBusinesses.js"></script> -->
 
   L.geoJson('pointdata').addTo(map);
 
