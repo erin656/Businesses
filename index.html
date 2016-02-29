@@ -53,11 +53,25 @@ var map = L.map('map', {
 
 map.addLayer(layer);
 
- <src name ="pointdata" script type="text/javascript" src="Businessesformatted.js"></script>
 
-var geoJson = L.geoJson('pointdata').addTo(map)
- map.addLayer(geoJson);
 
+var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+L.geoJson(pointdata, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    }
+}).addTo(map);
+// var businesses = L.geoJson('pointdata').addTo(map)
+//  map.addLayer(businesses);
+ <src name ="pointdata" script type="text/javascript" src="AmendolaBusinesses.js"></script>
 
 <!-- // var pointdata =
 //  '{"Name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
