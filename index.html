@@ -24,23 +24,21 @@
       height: 500px;
       background-color: gray;
     }
-    button {
+    /*button {
       width: 200px;
       height: 73px;
       margin-bottom: 50px;
       font-size: 24px;
       border-radius: 10px;
       margin-right: 10px;
-    }
+    }*/
   </style>
 </head>
 
 <body>
 
-
-
-  <button id="one" class="myButton">One!</button>
-  <button id="two" class="myButton">Two!</button>
+ <!--  <button id="one" class="myButton">One!</button>
+  <button id="two" class="myButton">Two!</button> -->
 
   <div id="myMap"></div>
 
@@ -50,19 +48,24 @@
   <script type="text/javascript">
 
   //CartoDB Basemap
-  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-  });
+  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+});
 
-  L.geoJson(Businessesformatted).addTo(map);
+var map = L.map('map', {
+  scrollWheelZoom: false,
+  center: [40.7127837, -74.0059413],
+  zoom: 6
+});
 
-
-  var eastRiver = [40.706913,-73.987513];
-  var upperWestSide = [40.788129,-73.974509];
-  var myZoom = 13;
-  //now the fun stuff:  leaflet!
-  var map = L.map('myMap').setView(eastRiver, myZoom);
+ var map = L.map('myMap').setView(eastRiver, myZoom);
   map.addLayer(layer)
+
+  // var Amendola Plaza = [40.852166,-73.827027];
+  // var Wilkinson Plaza = [40.851655,-73.829486];
+  // var myZoom = 19;
+  //now the fun stuff:  leaflet!
+ 
   // //Let's add a marker
   // var marker = L.marker([40.768058,-73.981891]).addTo(map);
   // marker.bindPopup("<b>Hello world!</b><br>I am a popup.")
@@ -75,15 +78,38 @@
     animate: true,
     duration: 2
   }
-    $(".myButton").click(function() {
-      if($(this).attr('id') == 'one' ) {
-        $(this).css('background-color','green');
-        map.panTo(eastRiver, panOptions);
-      } else {
-        $(this).css('background-color','red');
-        map.panTo(upperWestSide, panOptions);
-      }
-    });
+    // $(".myButton").click(function() {
+    //   if($(this).attr('id') == 'one' ) {
+    //     $(this).css('background-color','green');
+    //     map.panTo(eastRiver, panOptions);
+    //   } else {
+    //     $(this).css('background-color','red');
+    //     map.panTo(upperWestSide, panOptions);
+    //   }
+    // });
+
+  L.geoJson(Businessesformatted).addTo(map);
+
+function getColor(Type) {
+    return Type = Retail ? '#800026' :
+           Type = Food  ? '#BD0026' :
+           Type = Medical  ? '#E31A1C' :
+           Type = Services  ? '#FC4E2A' :
+           //d > 50   ? '#FD8D3C' :
+           //d > 20   ? '#FEB24C' :
+           //d > 10   ? '#FED976' :
+            //          '#FFEDA0';
+}
+    function style(feature) {
+    return {
+        markerColor: getColor(feature.properties.Type),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+            };
+}
+
+L.geoJson(statesData, {style: style}).addTo(map);
   </script>
 </body>
 </html>
