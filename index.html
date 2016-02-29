@@ -53,9 +53,10 @@ var map = L.map('map', {
 
 map.addLayer(layer);
 
-   <link rel ="pointdata" script type="text/javascript" src="Businessesformatted.js"></script>
-  
-  L.geoJson('pointdata').addTo(map);
+ <link rel ="pointdata" script type="text/javascript" src="Businessesformatted.js"></script>
+   
+  var layer = L.geoJson('pointdata').addTo(map);
+
 
 <!-- // var pointdata =
 //  '{"Name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
