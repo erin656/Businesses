@@ -6,7 +6,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"CVS",
             "Type":"Retail",
             "Address":"3276 Westchester Avenue",
@@ -25,10 +24,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Subway",
             "Type":"Food",
-            "Services":"Sub Sandwiches"
+            "Services":"Sub Sandwiches",
+            "Address":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -43,10 +42,9 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Baskin Robbins",
             "Type":"Food",
-            "Address":"",
+            "Address":"UNK",
             "Services":"Ice Cream"
          },
          "geometry":{
@@ -62,10 +60,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Dunkin Donuts",
             "Type":"Food",
-            "Services":"Coffee "
+            "Services":"Coffee ",
+            "Address":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -80,10 +78,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Services":"Convenience/Lotto",
             "Type":"Retail",
-            "Name":"Subway Shop"
+            "Name":"Subway Shop",
+            "Address":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -98,10 +96,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Villa Barone Ristorante",
             "Type":"Food",
-            "Services":"Classic Italian Bistro"
+            "Services":"Classic Italian Bistro",
+            "Address":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -116,7 +114,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Type":"Retail/Food",
             "Services":"Convenience Store/Deli",
             "Address":"3287A Westchester Avenue",
@@ -135,7 +132,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Address":"3287B Westchester Avenue",
             "Type":"Service",
             "Name":"Car Service",
@@ -154,7 +150,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Wa Beauty Supply",
             "Type":"Retail",
             "Services":"Beauty Supplies/Wigs",
@@ -173,7 +168,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Services":"Cell Phone Sales/Service",
             "Name":"Boost Mobile",
             "Type":"Retail/Service",
@@ -192,7 +186,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Services":"Discount Retailer",
             "Type":"Retail",
             "Address":"3285 Westchester Avenue",
@@ -211,7 +204,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Crosby Cleaners",
             "Type":"Service",
             "Services":"Dry Cleaning",
@@ -230,7 +222,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Gana Wine & Spirits",
             "Type":"Alcoholic Beverages",
             "Address":"3279 Westchester Avenue",
@@ -249,7 +240,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Kennedy's Chicken & Sandwiches",
             "Type":"Food",
             "Address":"3275 Westchester Avenue",
@@ -268,7 +258,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Peghe Deli",
             "Type":"Food",
             "Address":"3273 Weschester Avenue",
@@ -287,7 +276,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Johnny Rags N.Y.C.",
             "Type":"Retail",
             "Address":"3257 Westchester Avenue",
@@ -306,10 +294,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Type":"Retail",
             "Name":"7 Eleven",
-            "Services":"Convenience Store"
+            "Services":"Convenience Store",
+            "Address":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -324,11 +312,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"DOCS Comprehensive Healthcare",
             "Type":"Medical",
             "Address":"3251 Westchester Avenue",
-            "Services":""
+            "Services":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -343,7 +330,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"North Bronx Paint & Hardware",
             "Type":"Retail",
             "Address":"3239 Westchester Avenue",
@@ -362,7 +348,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"King Hong",
             "Type":"Food",
             "Address":"3227A Westchester Avenue",
@@ -381,7 +366,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Bar Pelham",
             "Type":"Bar",
             "Address":"3229 Westchester Avenue",
@@ -400,7 +384,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Electric Paradise",
             "Type":"Service",
             "Address":"3221 Westchester Avenue",
@@ -419,7 +402,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Address":"3223A Westchester Avenue",
             "Type":"Service",
             "Name":"Alex & Chris Beauty Salon & Spa",
@@ -438,7 +420,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Medical Rehabilitation Associates",
             "Type":"Medical",
             "Address":"3225 Westchester Avenue",
@@ -455,10 +436,12 @@
       {
          "type":"Feature",
          "properties":{
+            "marker-size":"medium",
             "Name":"Westchester Avenue Pharmacy",
             "Type":"Retail",
             "Services":"Convenience/Pharmacy",
-            "Address":"3227 Westchester Avenue"
+            "Address":"3227 Westchester Avenue",
+            "marker-color":"#7e7e7e"
          },
          "geometry":{
             "type":"Point",
@@ -473,9 +456,8 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Type":"Medical/Retail",
-            "Address":"",
+            "Address":"UNK",
             "Name":"Monroe Orthotics and Prosthetics",
             "Services":"Orthotics, Prosthetics, and Medical Supplies"
          },
@@ -492,9 +474,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Advanced Chiropractic of Pelham Bay",
-            "Type":"Medical"
+            "Type":"Medical",
+            "Services":"UNK",
+            "Address":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -509,7 +492,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"A Secret Garden",
             "Type":"Service",
             "Address":"3231 Westchester Avenue",
@@ -528,8 +510,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
-            "Name":"Pelham Bay Wellness Center"
+            "Name":"Pelham Bay Wellness Center",
+            "Address":"UNK",
+            "Type":"UNK",
+            "Services":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -544,10 +528,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Euro Mart",
             "Services":"Specialty Foods/Grocer",
-            "Type":"Grocer"
+            "Type":"Grocer",
+            "Address":"UNK"
          },
          "geometry":{
             "type":"Point",
@@ -562,7 +546,6 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Chase Bank",
             "Type":"Bank",
             "Address":"3217 Westchester Avenue",
@@ -581,9 +564,10 @@
          "properties":{
             "marker-color":"#7e7e7e",
             "marker-size":"medium",
-            "marker-symbol":"",
             "Name":"Pelham Bay Professional Center",
-            "Address":"3250 Westchester Avenue"
+            "Address":"3250 Westchester Avenue",
+            "Type":"UNK",
+            "Services":"UNK"
          },
          "geometry":{
             "type":"Point",

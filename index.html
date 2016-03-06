@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
    <style type="text/css">
 
+   <script src="maps.js"></script>
+
     body, html {
       font-family: sans-serif;
     }
@@ -34,95 +36,113 @@
 <p> This is a guide to restaurants, shops, and services along Westchester Avenue in the northeastern Bronx neighborhood of Pelham Bay. This growing commercial district combines the transportation access of Amendola Plaza, the natural beauty and amenities of Pelham Bay Park, and a small-neighborhood feel.
 </p>
 
-  <div id="map"></div>
+ <div id="map"></div>
 
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script type="text/javascript">
 
-
- var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
  
 var map = L.map('map', {
-  scrollWheelZoom: false,
-  center: [40.852080,-73.827830],
-  zoom: 13
+  scrollWheelZoom: true,
+  center: [40.852693,-73.827830],
+  zoom: 18
 });
 
 map.addLayer(layer);
 
+// var geojsonMarkerOptions = {
+//     radius: 8,
+//     fillColor: "#ff7800",
+//     color: "#000",
+//     weight: 1,
+//     opacity: 1,
+//     fillOpacity: 0.8
+// };
 
-try {
+// L.geoJson(data, {
+//     pointToLayer: function (feature, latlng) {
+//         return L.circleMarker(latlng, geojsonMarkerOptions);
+//     }
+// }).addTo(map);
 
-var geojsonMarkerOptions = {
-    radius: 8,
-    fillColor: "#ff7800",
-    color: "#000",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 0.8
-};
+// var marker = 'maps.geojson'
 
-L.geoJson(pointdata, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions);
-    }
-}).addTo(map);
- var businesses = L.geoJson('pointdata').addTo(map)
+$.getJSON('maps.geojson', function(feature) {
+  var layer = L.geoJson(feature).addTo(map);
+   // var marker = L.marker(feature.coord).addTo(map);
+    // marker.bindPopup(data.Name + data.Services) 
+       layer.bindPopup("Hi" + feature.Services).openPopup(feature);
+      // layer.bindPopup('<b>' + feature.properties.mdname + '</b><br>'
+      //                   + strtype + '<br><br>'
+      //                   + feature.properties.mdadress + '<br>'
+      //                   + feature.properties.mdfon);
+   // myMapData.forEach(function(data) {
+    // var marker = L.marker(element.coordinates).addTo(map);
+    // marker.bindPopup(data.Name);
+  })
 
-map.addLayer(businesses);
-}
-
- <src name ="pointdata" script type="text/javascript" src="AmendolaBusinesses.js"></script>
-<!-- // var pointdata =
-//  '{"Name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
- // '{"name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}'; -->
-
+// var myLayer = L.geoJson(feature).addTo(map);
+// $.getJSON("data/buildings.json", function(json) {
+//   myLayer.addData(json);
+// });
+   // success : function (response) {
+   //      Businesses = L.geoJson(response, {
+            // style: function (feature) {
+            //     return {
+            //         stroke: false,
+            //         fillColor: 'FFFFFF',
+            //         fillOpacity: 0
+            //     };
+            // },
+        //     onEachFeature: function (feature, layer){
+        //         popupOptions = {maxWidth: 200};
+        //         layer.bindPopup( feature.properties.sitename 
+        //             + feature.properties.dog_exercise,popupOptions);
+        //     }
+        // }.addTo(map);
+  
+// function onEachFeature(feature, layer) {
+//     // does this feature have a property named popupContent?
+//     if (feature.properties && feature.properties.popupContent) {
+//         layer.bindPopup(feature.properties.)
+//     };
  <!--  // var Amendola Plaza = [40.706913,-73.987513];
   // var Wilkinson Plaza = [40.788129,-73.974509];
   // var Area = [40.852080,-73.827830];
   // var myZoom = 17;
  -->
- <!--  //now the fun stuff:  leaflet!
-  // var map = L.map('myMap').setView(Area, myZoom);
-  // map.addLayer(layer)
-  // //Let's add a marker
-  // var marker = L.marker([40.768058,-73.981891]).addTo(map);
+  //  var myMapData = "maps.geojson.js";
+  //  var marker = "maps.geojson.js";
 
-  //Now let's use our custom-made array to make many markers
-  myMapData.forEach(function(element) {
-    var marker = L.marker(element.coord).addTo(map);
-    marker.bindPopup(element.Name) -->
- <!-- }); -->
+  // myMapData.forEach(function(data) {
+  //   var marker = L.marker(element.coordinates).addTo(map);
+  //   marker.bindPopup(element.Name)
+  // });
 
-<!-- (function () {
+   //  var panOptions = {
+   //   animate: true,
+   //   duration: 2
+   // };
 
-  var myData;
+ // var myMapData = 'maps.geojson'
 
-//   function test(callback) {
-//     $.getJSON('notebook-json-data.php', function (data) {
-//       callback(data);
-//     });
-//   }
+ //  myMapData.forEach(function(data) {
+ //    var marker = L.marker(element.coord).addTo(map);
+ //    marker.bindPopup(data.Name)});
 
-//   test(function (data) {
-//     myData = data;
-//     autoPopulate('field', 'id');
-//   });
 
-//   function autoPopulate(field, id) {
-//     console.log(myData);
-//   }
-
-// }); -->
-
- <!--   var panOptions = {
-     animate: true,
-     duration: 2
-   }
- -->
+ // $.getJSON('maps.geojson', function(data) {
+ //  var myMapData = L.geoJson(data).addTo(map); 
+ // })
+ 
+ // myMapData.forEach(function(element) {
+ //    var marker = L.marker(element.coord).addTo(map);
+ //    marker.bindPopup("<b>Hello world!</b><br>I am " + element.name)
+ //  });
   </script>
 </body>
 </html>
